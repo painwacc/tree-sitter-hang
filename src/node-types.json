@@ -1,73 +1,5 @@
 [
   {
-    "type": "array_indexes",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "decl_stat",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      },
-      "ident": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "type",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "expr",
-    "named": true,
-    "fields": {
-      "__kind": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "str_liter",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -86,37 +18,39 @@
     "type": "stat",
     "named": true,
     "fields": {
-      "__kind": {
+      "ident": {
         "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "decl_stat",
+            "type": "ident",
             "named": true
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "type",
+          "named": true
+        }
+      ]
     }
-  },
-  {
-    "type": ",",
-    "named": false
-  },
-  {
-    "type": ";",
-    "named": false
   },
   {
     "type": "=",
     "named": false
   },
   {
-    "type": "[",
-    "named": false
-  },
-  {
-    "type": "]",
-    "named": false
+    "type": "expr",
+    "named": true
   },
   {
     "type": "ident",
@@ -124,10 +58,6 @@
   },
   {
     "type": "line_comment",
-    "named": true
-  },
-  {
-    "type": "str_liter",
     "named": true
   },
   {
