@@ -48,28 +48,14 @@ module.exports = grammar({
     rules: {
         source_file: $ => $.stat,
 
-        /*
-         * Keywords
-         */
-        bool: $ => 'bool',
-        char: $ => 'char',
-        chr: $ => 'chr',
-        false: $ => 'false',
-        fst: $ => 'fst',
-        int: $ => 'int',
-        len: $ => 'len',
-        null: $ => 'null',
-        ord: $ => 'ord',
-        snd: $ => 'snd',
-        string: $ => 'string',
-        true: $ => 'true',
+
 
 
 
         /*
          * Types
          */
-        type: $ => $.string,
+        type: $ => 'string',
 
         /*
          * Expressions

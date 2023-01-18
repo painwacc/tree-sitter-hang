@@ -5,57 +5,9 @@
       "type": "SYMBOL",
       "name": "stat"
     },
-    "bool": {
-      "type": "STRING",
-      "value": "bool"
-    },
-    "char": {
-      "type": "STRING",
-      "value": "char"
-    },
-    "chr": {
-      "type": "STRING",
-      "value": "chr"
-    },
-    "false": {
-      "type": "STRING",
-      "value": "false"
-    },
-    "fst": {
-      "type": "STRING",
-      "value": "fst"
-    },
-    "int": {
-      "type": "STRING",
-      "value": "int"
-    },
-    "len": {
-      "type": "STRING",
-      "value": "len"
-    },
-    "null": {
-      "type": "STRING",
-      "value": "null"
-    },
-    "ord": {
-      "type": "STRING",
-      "value": "ord"
-    },
-    "snd": {
-      "type": "STRING",
-      "value": "snd"
-    },
-    "string": {
+    "type": {
       "type": "STRING",
       "value": "string"
-    },
-    "true": {
-      "type": "STRING",
-      "value": "true"
-    },
-    "type": {
-      "type": "SYMBOL",
-      "name": "string"
     },
     "expr": {
       "type": "FIELD",
