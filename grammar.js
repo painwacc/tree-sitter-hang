@@ -68,33 +68,12 @@ module.exports = grammar({
         string: $ => 'string',
         true: $ => 'true',
 
-        /*
-         * Operators
-         */
-        op_bang: $ => '!',
-        op_asterix: $ => '*',
-        op_slash: $ => '/',
-        op_percent: $ => '%',
-        op_plus: $ => '+',
-        op_dash: $ => '-',
-        op_gt: $ => '>',
-        op_ge: $ => '>=',
-        op_lt: $ => '<',
-        op_le: $ => '<=',
-        op_eq: $ => '==',
-        op_ne: $ => '!=',
-        op_and: $ => '&&',
-        op_or: $ => '||',
+
 
         /*
          * Types
          */
-        type: $ => kind($.base_type, $.array_type, $.pair_type),
-        base_type: $ => kind($.int, $.bool, $.char, $.string),
-        array_type: $ => seq(field('inner_type', $.type), '[', ']'),
-        pair_type: $ => seq('pair', '(', field('lhs', $.pair_elem_type), ',', field('rhs', $.pair_elem_type), ')'),
-        pair_elem_type: $ => kind($.base_type, $.array_type, $.raw_pair_type),
-        raw_pair_type: $ => 'pair',
+        type: $ => $.string,
 
         /*
          * Expressions
