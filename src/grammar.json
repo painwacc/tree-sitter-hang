@@ -2,25 +2,8 @@
   "name": "wacc",
   "rules": {
     "source_file": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "begin"
-        },
-        {
-          "type": "FIELD",
-          "name": "main",
-          "content": {
-            "type": "SYMBOL",
-            "name": "stats"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "end"
-        }
-      ]
+      "type": "SYMBOL",
+      "name": "stat"
     },
     "bool": {
       "type": "STRING",

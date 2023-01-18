@@ -46,11 +46,7 @@ module.exports = grammar({
     // externals: $ => [$.ident],
 
     rules: {
-        source_file: $ => seq(
-            'begin',
-            field('main', $.stats),
-            'end',
-        ),
+        source_file: $ => $.stat,
 
         /*
          * Keywords
