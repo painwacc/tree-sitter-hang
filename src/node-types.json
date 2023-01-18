@@ -353,38 +353,6 @@
     }
   },
   {
-    "type": "unary_op",
-    "named": true,
-    "fields": {
-      "__kind": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "chr",
-            "named": true
-          },
-          {
-            "type": "len",
-            "named": true
-          },
-          {
-            "type": "op_bang",
-            "named": true
-          },
-          {
-            "type": "op_dash",
-            "named": true
-          },
-          {
-            "type": "ord",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "(",
     "named": false
   },
@@ -425,16 +393,8 @@
     "named": true
   },
   {
-    "type": "chr",
-    "named": true
-  },
-  {
     "type": "end",
     "named": false
-  },
-  {
-    "type": "false",
-    "named": true
   },
   {
     "type": "ident",
@@ -449,75 +409,7 @@
     "named": false
   },
   {
-    "type": "len",
-    "named": true
-  },
-  {
     "type": "line_comment",
-    "named": true
-  },
-  {
-    "type": "null",
-    "named": false
-  },
-  {
-    "type": "op_and",
-    "named": true
-  },
-  {
-    "type": "op_asterix",
-    "named": true
-  },
-  {
-    "type": "op_bang",
-    "named": true
-  },
-  {
-    "type": "op_dash",
-    "named": true
-  },
-  {
-    "type": "op_eq",
-    "named": true
-  },
-  {
-    "type": "op_ge",
-    "named": true
-  },
-  {
-    "type": "op_gt",
-    "named": true
-  },
-  {
-    "type": "op_le",
-    "named": true
-  },
-  {
-    "type": "op_lt",
-    "named": true
-  },
-  {
-    "type": "op_ne",
-    "named": true
-  },
-  {
-    "type": "op_or",
-    "named": true
-  },
-  {
-    "type": "op_percent",
-    "named": true
-  },
-  {
-    "type": "op_plus",
-    "named": true
-  },
-  {
-    "type": "op_slash",
-    "named": true
-  },
-  {
-    "type": "ord",
     "named": true
   },
   {
@@ -530,10 +422,6 @@
   },
   {
     "type": "string",
-    "named": true
-  },
-  {
-    "type": "true",
     "named": true
   }
 ]

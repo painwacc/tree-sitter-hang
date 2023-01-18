@@ -119,67 +119,15 @@ module.exports = grammar({
          * Expressions
          */
         expr: $ => kind(
-            // $.int_liter,
-            // $.bool_liter,
-            // $.char_liter,
             $.str_liter,
-            // $.pair_null,
-            // $.ident,
-            // $.array_elem,
-            // $.unary_expr,
-            // $.binary_expr,
-            // $.bracket_expr,
         ),
-        int_liter: $ => /[+-]?[0-9]+/,
-        bool_liter: $ => kind($.true, $.false),
-        char_liter: $ => /'([[\x00-\x7f]&&[^\\'"\n]]|(\\[0btnfr"'\\]))'/,
         str_liter: $ => /"([[\x00-\x7f]&&[^\\'"\n]]|(\\[0btnfr"'\\]))*"/,
         array_liter: $ => seq('[', intersperse(expr($), ','), ']'),
         ident: $ => /[_a-zA-Z][_0-9a-zA-Z]*/,
         array_elem: $ => seq(ident($), field('indices', $.array_indexes)),
         array_indexes: $ => repeat1(seq('[', expr($), ']')),
-        pair_null: $ => 'null',
-        unary_op: $ => kind($.op_bang, $.op_dash, $.len, $.ord, $.chr),
-        unary_expr: $ => prec(7, seq(field('op', $.unary_op), field('expr', $.expr))),
-        binary_expr: $ => kind(
-            make_binop($, 6, $.op_asterix),
-            make_binop($, 6, $.op_slash),
-            make_binop($, 6, $.op_percent),
-            make_binop($, 5, $.op_plus),
-            make_binop($, 5, $.op_dash),
-            make_binop($, 4, $.op_gt),
-            make_binop($, 4, $.op_ge),
-            make_binop($, 4, $.op_lt),
-            make_binop($, 4, $.op_le),
-            make_binop($, 3, $.op_eq),
-            make_binop($, 3, $.op_ne),
-            make_binop($, 2, $.op_and),
-            make_binop($, 1, $.op_or)
-        ),
-        bracket_expr: $ => seq('(', expr($), ')'),
 
 
-        /*
-         * LValues and RValues
-         */
-        // lvalue: $ => kind(
-        //     $.ident,
-        //     $.array_elem,
-        //     $.pair_elem,
-        // ),
-        // rvalue: $ => kind(
-        //     $.expr,
-        //     $.array_liter,
-        //     $.newpair,
-        //     $.pair_elem,
-        //     $.call,
-        // ),
-        // newpair: $ => seq('newpair', '(', field('fst', $.expr), ',', field('snd', $.expr), ')'),
-        // call: $ => seq('call', field('func_name', $.ident), '(', field('arg_list', optional($.arg_list)), ')'),
-
-        // pair_elem: $ => seq(field('selector', $.pair_elem_selector), field('lvalue', $.lvalue)),
-        // pair_elem_selector: $ => kind($.fst, $.snd),
-        // arg_list: $ => intersperse1(expr($), ','),
 
         /* 
          * Statements
