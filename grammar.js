@@ -162,24 +162,24 @@ module.exports = grammar({
         /*
          * LValues and RValues
          */
-        lvalue: $ => kind(
-            $.ident,
-            $.array_elem,
-            $.pair_elem,
-        ),
-        rvalue: $ => kind(
-            $.expr,
-            $.array_liter,
-            $.newpair,
-            $.pair_elem,
-            $.call,
-        ),
-        newpair: $ => seq('newpair', '(', field('fst', $.expr), ',', field('snd', $.expr), ')'),
-        call: $ => seq('call', field('func_name', $.ident), '(', field('arg_list', optional($.arg_list)), ')'),
+        // lvalue: $ => kind(
+        //     $.ident,
+        //     $.array_elem,
+        //     $.pair_elem,
+        // ),
+        // rvalue: $ => kind(
+        //     $.expr,
+        //     $.array_liter,
+        //     $.newpair,
+        //     $.pair_elem,
+        //     $.call,
+        // ),
+        // newpair: $ => seq('newpair', '(', field('fst', $.expr), ',', field('snd', $.expr), ')'),
+        // call: $ => seq('call', field('func_name', $.ident), '(', field('arg_list', optional($.arg_list)), ')'),
 
-        pair_elem: $ => seq(field('selector', $.pair_elem_selector), field('lvalue', $.lvalue)),
-        pair_elem_selector: $ => kind($.fst, $.snd),
-        arg_list: $ => intersperse1(expr($), ','),
+        // pair_elem: $ => seq(field('selector', $.pair_elem_selector), field('lvalue', $.lvalue)),
+        // pair_elem_selector: $ => kind($.fst, $.snd),
+        // arg_list: $ => intersperse1(expr($), ','),
 
         /* 
          * Statements
@@ -191,7 +191,7 @@ module.exports = grammar({
             $.decl_stat,
         ),
 
-        decl_stat: $ => seq(type($), field('ident', $.ident), '=', rvalue($)),
+        decl_stat: $ => seq(type($), field('ident', $.ident), '=', expr($)),
 
         line_comment: $ => /#[^\n\r]*[\n\r]*/
     }
