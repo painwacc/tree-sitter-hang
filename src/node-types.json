@@ -1,0 +1,1262 @@
+[
+  {
+    "type": "arg_list",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "array_elem",
+    "named": true,
+    "fields": {
+      "ident": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "indices": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_indexes",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "array_indexes",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "array_liter",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "array_type",
+    "named": true,
+    "fields": {
+      "inner_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "assign_stat",
+    "named": true,
+    "fields": {
+      "lvalue": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lvalue",
+            "named": true
+          }
+        ]
+      },
+      "rvalue": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "rvalue",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "base_type",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bool",
+            "named": true
+          },
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "int",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "binary_expr",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "op_and",
+            "named": true
+          },
+          {
+            "type": "op_asterix",
+            "named": true
+          },
+          {
+            "type": "op_dash",
+            "named": true
+          },
+          {
+            "type": "op_eq",
+            "named": true
+          },
+          {
+            "type": "op_ge",
+            "named": true
+          },
+          {
+            "type": "op_gt",
+            "named": true
+          },
+          {
+            "type": "op_le",
+            "named": true
+          },
+          {
+            "type": "op_lt",
+            "named": true
+          },
+          {
+            "type": "op_ne",
+            "named": true
+          },
+          {
+            "type": "op_or",
+            "named": true
+          },
+          {
+            "type": "op_percent",
+            "named": true
+          },
+          {
+            "type": "op_plus",
+            "named": true
+          },
+          {
+            "type": "op_slash",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "block_stat",
+    "named": true,
+    "fields": {
+      "stats": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stats",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "bool_liter",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "bracket_expr",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "call",
+    "named": true,
+    "fields": {
+      "arg_list": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "arg_list",
+            "named": true
+          }
+        ]
+      },
+      "func_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "decl",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "params": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "param_list",
+            "named": true
+          }
+        ]
+      },
+      "return_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "decl_stat",
+    "named": true,
+    "fields": {
+      "ident": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "rvalue": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "rvalue",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "exit_stat",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "expr",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_elem",
+            "named": true
+          },
+          {
+            "type": "binary_expr",
+            "named": true
+          },
+          {
+            "type": "bool_liter",
+            "named": true
+          },
+          {
+            "type": "bracket_expr",
+            "named": true
+          },
+          {
+            "type": "char_liter",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "int_liter",
+            "named": true
+          },
+          {
+            "type": "pair_null",
+            "named": true
+          },
+          {
+            "type": "str_liter",
+            "named": true
+          },
+          {
+            "type": "unary_expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "free_stat",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "func",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stats",
+            "named": true
+          }
+        ]
+      },
+      "decl": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "decl",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "if_stat",
+    "named": true,
+    "fields": {
+      "cond": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      },
+      "unless": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stats",
+            "named": true
+          }
+        ]
+      },
+      "when": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stats",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "lvalue",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_elem",
+            "named": true
+          },
+          {
+            "type": "ident",
+            "named": true
+          },
+          {
+            "type": "pair_elem",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "newpair",
+    "named": true,
+    "fields": {
+      "fst": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      },
+      "snd": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "pair_elem",
+    "named": true,
+    "fields": {
+      "lvalue": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lvalue",
+            "named": true
+          }
+        ]
+      },
+      "selector": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "pair_elem_selector",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "pair_elem_selector",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "fst",
+            "named": true
+          },
+          {
+            "type": "snd",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "pair_elem_type",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "base_type",
+            "named": true
+          },
+          {
+            "type": "raw_pair_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "pair_null",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "pair_type",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "pair_elem_type",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "pair_elem_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "param",
+    "named": true,
+    "fields": {
+      "ident": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ident",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "param_list",
+    "named": true,
+    "fields": {
+      "param": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "param",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "print_stat",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "println_stat",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "raw_pair_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "read_stat",
+    "named": true,
+    "fields": {
+      "lvalue": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lvalue",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "return_stat",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "rvalue",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_liter",
+            "named": true
+          },
+          {
+            "type": "call",
+            "named": true
+          },
+          {
+            "type": "expr",
+            "named": true
+          },
+          {
+            "type": "newpair",
+            "named": true
+          },
+          {
+            "type": "pair_elem",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {
+      "funcs": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "func",
+            "named": true
+          }
+        ]
+      },
+      "main": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stats",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "stat",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "assign_stat",
+            "named": true
+          },
+          {
+            "type": "block_stat",
+            "named": true
+          },
+          {
+            "type": "decl_stat",
+            "named": true
+          },
+          {
+            "type": "exit_stat",
+            "named": true
+          },
+          {
+            "type": "free_stat",
+            "named": true
+          },
+          {
+            "type": "if_stat",
+            "named": true
+          },
+          {
+            "type": "print_stat",
+            "named": true
+          },
+          {
+            "type": "println_stat",
+            "named": true
+          },
+          {
+            "type": "read_stat",
+            "named": true
+          },
+          {
+            "type": "return_stat",
+            "named": true
+          },
+          {
+            "type": "skip_stat",
+            "named": true
+          },
+          {
+            "type": "while_stat",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "stats",
+    "named": true,
+    "fields": {
+      "stat": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "stat",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "type",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "base_type",
+            "named": true
+          },
+          {
+            "type": "pair_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "unary_expr",
+    "named": true,
+    "fields": {
+      "expr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      },
+      "op": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "unary_op",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "unary_op",
+    "named": true,
+    "fields": {
+      "__kind": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "chr",
+            "named": true
+          },
+          {
+            "type": "len",
+            "named": true
+          },
+          {
+            "type": "op_bang",
+            "named": true
+          },
+          {
+            "type": "op_dash",
+            "named": true
+          },
+          {
+            "type": "ord",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "while_stat",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "stats",
+            "named": true
+          }
+        ]
+      },
+      "cond": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "expr",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "begin",
+    "named": false
+  },
+  {
+    "type": "bool",
+    "named": true
+  },
+  {
+    "type": "call",
+    "named": false
+  },
+  {
+    "type": "char",
+    "named": true
+  },
+  {
+    "type": "char_liter",
+    "named": true
+  },
+  {
+    "type": "chr",
+    "named": true
+  },
+  {
+    "type": "do",
+    "named": false
+  },
+  {
+    "type": "done",
+    "named": false
+  },
+  {
+    "type": "else",
+    "named": false
+  },
+  {
+    "type": "end",
+    "named": false
+  },
+  {
+    "type": "exit",
+    "named": false
+  },
+  {
+    "type": "false",
+    "named": true
+  },
+  {
+    "type": "fi",
+    "named": false
+  },
+  {
+    "type": "free",
+    "named": false
+  },
+  {
+    "type": "fst",
+    "named": true
+  },
+  {
+    "type": "ident",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": true
+  },
+  {
+    "type": "int_liter",
+    "named": true
+  },
+  {
+    "type": "is",
+    "named": false
+  },
+  {
+    "type": "len",
+    "named": true
+  },
+  {
+    "type": "line_comment",
+    "named": true
+  },
+  {
+    "type": "newpair",
+    "named": false
+  },
+  {
+    "type": "null",
+    "named": false
+  },
+  {
+    "type": "op_and",
+    "named": true
+  },
+  {
+    "type": "op_asterix",
+    "named": true
+  },
+  {
+    "type": "op_bang",
+    "named": true
+  },
+  {
+    "type": "op_dash",
+    "named": true
+  },
+  {
+    "type": "op_eq",
+    "named": true
+  },
+  {
+    "type": "op_ge",
+    "named": true
+  },
+  {
+    "type": "op_gt",
+    "named": true
+  },
+  {
+    "type": "op_le",
+    "named": true
+  },
+  {
+    "type": "op_lt",
+    "named": true
+  },
+  {
+    "type": "op_ne",
+    "named": true
+  },
+  {
+    "type": "op_or",
+    "named": true
+  },
+  {
+    "type": "op_percent",
+    "named": true
+  },
+  {
+    "type": "op_plus",
+    "named": true
+  },
+  {
+    "type": "op_slash",
+    "named": true
+  },
+  {
+    "type": "ord",
+    "named": true
+  },
+  {
+    "type": "pair",
+    "named": false
+  },
+  {
+    "type": "print",
+    "named": false
+  },
+  {
+    "type": "println",
+    "named": false
+  },
+  {
+    "type": "read",
+    "named": false
+  },
+  {
+    "type": "return",
+    "named": false
+  },
+  {
+    "type": "skip_stat",
+    "named": true
+  },
+  {
+    "type": "snd",
+    "named": true
+  },
+  {
+    "type": "str_liter",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "then",
+    "named": false
+  },
+  {
+    "type": "true",
+    "named": true
+  },
+  {
+    "type": "while",
+    "named": false
+  }
+]
