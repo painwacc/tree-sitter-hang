@@ -188,32 +188,10 @@ module.exports = grammar({
         stats: $ => intersperse1(stat($), ';'),
 
         stat: $ => kind(
-            // $.skip_stat,
             $.decl_stat,
-            // $.assign_stat,
-            // $.read_stat,
-            // $.free_stat,
-            // $.return_stat,
-            // $.exit_stat,
-            // $.print_stat,
-            // $.println_stat,
-            // $.if_stat,
-            // $.while_stat,
-            // $.block_stat,
         ),
 
-        skip_stat: $ => 'skip',
         decl_stat: $ => seq(type($), field('ident', $.ident), '=', rvalue($)),
-        assign_stat: $ => seq(lvalue($), '=', rvalue($)),
-        read_stat: $ => seq('read', lvalue($)),
-        free_stat: $ => seq('free', expr($)),
-        return_stat: $ => seq('return', expr($)),
-        exit_stat: $ => seq('exit', expr($)),
-        print_stat: $ => seq('print', expr($)),
-        println_stat: $ => seq('println', expr($)),
-        if_stat: $ => seq('if', field('cond', $.expr), 'then', field('when', $.stats), 'else', field('unless', $.stats), 'fi'),
-        while_stat: $ => seq('while', field('cond', $.expr), 'do', field('body', $.stats), 'done'),
-        block_stat: $ => seq('begin', stats($), 'end'),
 
         line_comment: $ => /#[^\n\r]*[\n\r]*/
     }

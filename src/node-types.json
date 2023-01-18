@@ -645,36 +645,12 @@
     "named": true
   },
   {
-    "type": "do",
-    "named": false
-  },
-  {
-    "type": "done",
-    "named": false
-  },
-  {
-    "type": "else",
-    "named": false
-  },
-  {
     "type": "end",
-    "named": false
-  },
-  {
-    "type": "exit",
     "named": false
   },
   {
     "type": "false",
     "named": true
-  },
-  {
-    "type": "fi",
-    "named": false
-  },
-  {
-    "type": "free",
-    "named": false
   },
   {
     "type": "fst",
@@ -683,10 +659,6 @@
   {
     "type": "ident",
     "named": true
-  },
-  {
-    "type": "if",
-    "named": false
   },
   {
     "type": "int",
@@ -777,22 +749,6 @@
     "named": false
   },
   {
-    "type": "print",
-    "named": false
-  },
-  {
-    "type": "println",
-    "named": false
-  },
-  {
-    "type": "read",
-    "named": false
-  },
-  {
-    "type": "return",
-    "named": false
-  },
-  {
     "type": "snd",
     "named": true
   },
@@ -805,15 +761,7 @@
     "named": true
   },
   {
-    "type": "then",
-    "named": false
-  },
-  {
     "type": "true",
     "named": true
-  },
-  {
-    "type": "while",
-    "named": false
   }
 ]
