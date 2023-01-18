@@ -1,8 +1,7 @@
 module.exports = grammar({
-    name: 'wacc',
-
+    name: 'hangs',
 
     rules: {
-        source_file: $ => /"([[\x00-\x7f]&&[^\\'"\n]]|(\\[0btnfr"'\\]))*"/,
+        source_file: $ => /"([[\x00-\x7f]&&[^"]])*"/,
     }
 });

@@ -1,9 +1,9 @@
 {
-  "name": "wacc",
+  "name": "hangs",
   "rules": {
     "source_file": {
       "type": "PATTERN",
-      "value": "\"([[\\x00-\\x7f]&&[^\\\\'\"\\n]]|(\\\\[0btnfr\"'\\\\]))*\""
+      "value": "\"([[\\x00-\\x7f]&&[^\"]])*\""
     }
   },
   "extras": [

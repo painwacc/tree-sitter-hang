@@ -63,26 +63,12 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [3] = 3,
 };
 
-static inline bool aux_sym_source_file_token1_character_set_1(int32_t c) {
-  return (c < 'b'
-    ? (c < '0'
-      ? (c < '\''
-        ? c == '"'
-        : c <= '\'')
-      : (c <= '0' || c == '\\'))
-    : (c <= 'b' || (c < 'r'
-      ? (c < 'n'
-        ? c == 'f'
-        : c <= 'n')
-      : (c <= 'r' || c == 't'))));
-}
-
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
   START_LEXER();
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (eof) ADVANCE(3);
+      if (eof) ADVANCE(2);
       if (lookahead == '"') ADVANCE(1);
       if (lookahead == '\t' ||
           lookahead == '\n' ||
@@ -90,19 +76,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == ' ') SKIP(0)
       END_STATE();
     case 1:
-      if (lookahead == '"') ADVANCE(4);
-      if (lookahead == '\\') ADVANCE(2);
-      if ((0 <= lookahead && lookahead <= '\t') ||
-          (11 <= lookahead && lookahead <= '&') ||
-          ('(' <= lookahead && lookahead <= 127)) ADVANCE(1);
+      if (lookahead == '"') ADVANCE(3);
+      if ((0 <= lookahead && lookahead <= 127)) ADVANCE(1);
       END_STATE();
     case 2:
-      if (aux_sym_source_file_token1_character_set_1(lookahead)) ADVANCE(1);
-      END_STATE();
-    case 3:
       ACCEPT_TOKEN(ts_builtin_sym_end);
       END_STATE();
-    case 4:
+    case 3:
       ACCEPT_TOKEN(aux_sym_source_file_token1);
       END_STATE();
     default:
@@ -157,7 +137,7 @@ extern "C" {
 #define extern __declspec(dllexport)
 #endif
 
-extern const TSLanguage *tree_sitter_wacc(void) {
+extern const TSLanguage *tree_sitter_hangs(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,
