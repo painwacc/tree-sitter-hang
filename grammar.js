@@ -48,28 +48,9 @@ module.exports = grammar({
     rules: {
         source_file: $ => seq(
             'begin',
-            field('funcs', repeat($.func)),
             field('main', $.stats),
             'end',
         ),
-
-        func: $ => seq(
-            decl($),
-            'is',
-            field('body', $.stats),
-            'end',
-        ),
-
-        decl: $ => seq(
-            field('return_type', $.type),
-            field('name', $.ident),
-            '(',
-            field('params', optional($.param_list)),
-            ')',
-        ),
-
-        param_list: $ => intersperse1(param($), ','),
-        param: $ => seq(type($), ident($)),
 
         /*
          * Keywords

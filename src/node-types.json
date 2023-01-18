@@ -60,42 +60,6 @@
     }
   },
   {
-    "type": "decl",
-    "named": true,
-    "fields": {
-      "name": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "params": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "param_list",
-            "named": true
-          }
-        ]
-      },
-      "return_type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "type",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "decl_stat",
     "named": true,
     "fields": {
@@ -141,32 +105,6 @@
         "types": [
           {
             "type": "str_liter",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "func",
-    "named": true,
-    "fields": {
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "stats",
-            "named": true
-          }
-        ]
-      },
-      "decl": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "decl",
             "named": true
           }
         ]
@@ -224,48 +162,6 @@
     }
   },
   {
-    "type": "param",
-    "named": true,
-    "fields": {
-      "ident": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "type",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "param_list",
-    "named": true,
-    "fields": {
-      "param": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "param",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "raw_pair_type",
     "named": true,
     "fields": {}
@@ -274,16 +170,6 @@
     "type": "source_file",
     "named": true,
     "fields": {
-      "funcs": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "func",
-            "named": true
-          }
-        ]
-      },
       "main": {
         "multiple": false,
         "required": true,
@@ -403,10 +289,6 @@
   {
     "type": "int",
     "named": true
-  },
-  {
-    "type": "is",
-    "named": false
   },
   {
     "type": "line_comment",
