@@ -2,56 +2,11 @@
   "name": "wacc",
   "rules": {
     "source_file": {
-      "type": "SYMBOL",
-      "name": "stat"
-    },
-    "type": {
-      "type": "STRING",
-      "value": "string"
-    },
-    "expr": {
       "type": "PATTERN",
       "value": "\"([[\\x00-\\x7f]&&[^\\\\'\"\\n]]|(\\\\[0btnfr\"'\\\\]))*\""
-    },
-    "ident": {
-      "type": "STRING",
-      "value": "s"
-    },
-    "stat": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "type"
-        },
-        {
-          "type": "FIELD",
-          "name": "ident",
-          "content": {
-            "type": "SYMBOL",
-            "name": "ident"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "="
-        },
-        {
-          "type": "SYMBOL",
-          "name": "expr"
-        }
-      ]
-    },
-    "line_comment": {
-      "type": "PATTERN",
-      "value": "#[^\\n\\r]*[\\n\\r]*"
     }
   },
   "extras": [
-    {
-      "type": "SYMBOL",
-      "name": "line_comment"
-    },
     {
       "type": "PATTERN",
       "value": "\\s"

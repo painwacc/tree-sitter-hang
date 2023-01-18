@@ -2,66 +2,6 @@
   {
     "type": "source_file",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "stat",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "stat",
-    "named": true,
-    "fields": {
-      "ident": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "ident",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "expr",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "=",
-    "named": false
-  },
-  {
-    "type": "expr",
-    "named": true
-  },
-  {
-    "type": "ident",
-    "named": true
-  },
-  {
-    "type": "line_comment",
-    "named": true
-  },
-  {
-    "type": "type",
-    "named": true
+    "fields": {}
   }
 ]
