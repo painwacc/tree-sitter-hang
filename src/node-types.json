@@ -90,32 +90,6 @@
     }
   },
   {
-    "type": "assign_stat",
-    "named": true,
-    "fields": {
-      "lvalue": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "lvalue",
-            "named": true
-          }
-        ]
-      },
-      "rvalue": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "rvalue",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "base_type",
     "named": true,
     "fields": {
@@ -137,142 +111,6 @@
           },
           {
             "type": "string",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "binary_expr",
-    "named": true,
-    "fields": {
-      "lhs": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "op_and",
-            "named": true
-          },
-          {
-            "type": "op_asterix",
-            "named": true
-          },
-          {
-            "type": "op_dash",
-            "named": true
-          },
-          {
-            "type": "op_eq",
-            "named": true
-          },
-          {
-            "type": "op_ge",
-            "named": true
-          },
-          {
-            "type": "op_gt",
-            "named": true
-          },
-          {
-            "type": "op_le",
-            "named": true
-          },
-          {
-            "type": "op_lt",
-            "named": true
-          },
-          {
-            "type": "op_ne",
-            "named": true
-          },
-          {
-            "type": "op_or",
-            "named": true
-          },
-          {
-            "type": "op_percent",
-            "named": true
-          },
-          {
-            "type": "op_plus",
-            "named": true
-          },
-          {
-            "type": "op_slash",
-            "named": true
-          }
-        ]
-      },
-      "rhs": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "block_stat",
-    "named": true,
-    "fields": {
-      "stats": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "stats",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "bool_liter",
-    "named": true,
-    "fields": {
-      "__kind": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "false",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "bracket_expr",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
             "named": true
           }
         ]
@@ -378,22 +216,6 @@
     }
   },
   {
-    "type": "exit_stat",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "expr",
     "named": true,
     "fields": {
@@ -402,59 +224,7 @@
         "required": true,
         "types": [
           {
-            "type": "array_elem",
-            "named": true
-          },
-          {
-            "type": "binary_expr",
-            "named": true
-          },
-          {
-            "type": "bool_liter",
-            "named": true
-          },
-          {
-            "type": "bracket_expr",
-            "named": true
-          },
-          {
-            "type": "char_liter",
-            "named": true
-          },
-          {
-            "type": "ident",
-            "named": true
-          },
-          {
-            "type": "int_liter",
-            "named": true
-          },
-          {
-            "type": "pair_null",
-            "named": true
-          },
-          {
             "type": "str_liter",
-            "named": true
-          },
-          {
-            "type": "unary_expr",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "free_stat",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
             "named": true
           }
         ]
@@ -481,42 +251,6 @@
         "types": [
           {
             "type": "decl",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "if_stat",
-    "named": true,
-    "fields": {
-      "cond": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      },
-      "unless": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "stats",
-            "named": true
-          }
-        ]
-      },
-      "when": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "stats",
             "named": true
           }
         ]
@@ -644,11 +378,6 @@
     }
   },
   {
-    "type": "pair_null",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "pair_type",
     "named": true,
     "fields": {
@@ -717,73 +446,9 @@
     }
   },
   {
-    "type": "print_stat",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "println_stat",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "raw_pair_type",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "read_stat",
-    "named": true,
-    "fields": {
-      "lvalue": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "lvalue",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "return_stat",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      }
-    }
   },
   {
     "type": "rvalue",
@@ -852,51 +517,7 @@
         "required": true,
         "types": [
           {
-            "type": "assign_stat",
-            "named": true
-          },
-          {
-            "type": "block_stat",
-            "named": true
-          },
-          {
             "type": "decl_stat",
-            "named": true
-          },
-          {
-            "type": "exit_stat",
-            "named": true
-          },
-          {
-            "type": "free_stat",
-            "named": true
-          },
-          {
-            "type": "if_stat",
-            "named": true
-          },
-          {
-            "type": "print_stat",
-            "named": true
-          },
-          {
-            "type": "println_stat",
-            "named": true
-          },
-          {
-            "type": "read_stat",
-            "named": true
-          },
-          {
-            "type": "return_stat",
-            "named": true
-          },
-          {
-            "type": "skip_stat",
-            "named": true
-          },
-          {
-            "type": "while_stat",
             "named": true
           }
         ]
@@ -944,32 +565,6 @@
     }
   },
   {
-    "type": "unary_expr",
-    "named": true,
-    "fields": {
-      "expr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
-            "named": true
-          }
-        ]
-      },
-      "op": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "unary_op",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
     "type": "unary_op",
     "named": true,
     "fields": {
@@ -995,32 +590,6 @@
           },
           {
             "type": "ord",
-            "named": true
-          }
-        ]
-      }
-    }
-  },
-  {
-    "type": "while_stat",
-    "named": true,
-    "fields": {
-      "body": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "stats",
-            "named": true
-          }
-        ]
-      },
-      "cond": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "expr",
             "named": true
           }
         ]
@@ -1069,10 +638,6 @@
   },
   {
     "type": "char",
-    "named": true
-  },
-  {
-    "type": "char_liter",
     "named": true
   },
   {
@@ -1125,10 +690,6 @@
   },
   {
     "type": "int",
-    "named": true
-  },
-  {
-    "type": "int_liter",
     "named": true
   },
   {
@@ -1230,10 +791,6 @@
   {
     "type": "return",
     "named": false
-  },
-  {
-    "type": "skip_stat",
-    "named": true
   },
   {
     "type": "snd",

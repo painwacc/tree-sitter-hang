@@ -402,43 +402,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "int_liter"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bool_liter"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "char_liter"
-          },
-          {
-            "type": "SYMBOL",
             "name": "str_liter"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "pair_null"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "ident"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "array_elem"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "unary_expr"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "binary_expr"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bracket_expr"
           }
         ]
       }
@@ -1332,51 +1296,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "skip_stat"
-          },
-          {
-            "type": "SYMBOL",
             "name": "decl_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "assign_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "read_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "free_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "return_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "exit_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "print_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "println_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "if_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "while_stat"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "block_stat"
           }
         ]
       }
